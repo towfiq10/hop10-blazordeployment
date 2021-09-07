@@ -1,0 +1,32 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+
+<button class="btn btn-primary" @onclick="IncrementCount"> Click me </button>
+<button class="btn btn-primary" @onclick="DecrementCount"> Click Me to see minus </button>
+<br />
+<p><input @bind="@DecrementAmount" type="number"
+    @bind:event="oninput" /> You entered: @DecrementAmount</p>
+@code {
+    private int currentCount = 0;  
+    
+    
+    [Parameter]    
+    
+
+    public int IncrementAmount { get; set; } = 1;
+    public int DecrementAmount { get; set; } = 1;
+    private void IncrementCount()
+    {
+        currentCount += IncrementAmount;
+    }   
+     private void DecrementCount()
+    {
+        currentCount -= DecrementAmount;
+    }      
+    
+}
+

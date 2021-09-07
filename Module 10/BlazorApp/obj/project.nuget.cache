@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Njble8gyoJKv0UXMV1rj+CUOsnIWQeDzourc8WFXH4G292FxZ1RKHNnRfGfr5Qrx0bEDEnj04QcxwzIqzi04/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\waran\\CS504\\hop09-towfiq10\\Module 9\\BlazorApp Option 1\\BlazorApp\\BlazorApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\waran\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.114.3\\stub.system.data.sqlite.core.netstandard.1.0.114.3.nupkg.sha512",
+    "C:\\Users\\waran\\.nuget\\packages\\system.data.sqlite.core\\1.0.114.3\\system.data.sqlite.core.1.0.114.3.nupkg.sha512"
+  ],
+  "logs": []
+}

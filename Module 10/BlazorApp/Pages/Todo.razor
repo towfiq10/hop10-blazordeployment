@@ -1,0 +1,37 @@
+@page "/todo" /*add url for this pages*/
+
+<h3>Todo</h3>
+
+<p>Number of todo items: @todos.Count(todo => !todo.IsDone)</p>
+
+@*This ul adds unorder list items to the Todo.razor *@
+
+@* This ul adds unorder list items to the Todo.razor. 
+foreach loops the code to add continuesly.
+This is internal no one can see this comment *@
+@* I was not sure what comment was required the one visible to the website or the other comment only coder can see it *@
+<ul>
+    
+    @foreach (var todo in todos)
+    {
+        <li>@todo.Title</li>
+    }
+</ul>
+
+@* This input place to write the information and button process it to add with the other codes *@
+<input placeholder="Something todo" @bind="newTodo"/>
+<button @onclick="AddTodo"> Add todo</button>
+
+@* This adds Ilist to the items if it is null will not add anything *@
+@code {
+    private IList<TodoItem> todos = new List<TodoItem>();
+        private string newTodo;
+        private void AddTodo()
+        {
+            if (!string.IsNullOrWhiteSpace(newTodo))
+            {
+                todos.Add(new TodoItem {Title = newTodo });
+                newTodo = string.Empty;
+            }
+        }
+}
